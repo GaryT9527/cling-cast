@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.garyt.cast</groupId>
+    <artifactId>cling-cast</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Cling Cast</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+
+        <seamless.version>1.1.2</seamless.version>
+        <lemma.version>1.1.1</lemma.version>
+        <testng.version>6.14.3</testng.version>
+        <android.version>4.1.1.4</android.version>
+        <android.maven.plugin.version>4.1.1</android.maven.plugin.version>
+        <maven.site.plugin.version>3.4</maven.site.plugin.version>
+        <jetty.version>8.1.22.v20160922</jetty.version>
+        <cdi.api.version>1.2</cdi.api.version>
+        <ejb.api.version>3.0</ejb.api.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <cling.version>2.1.2</cling.version>
+        <jna.version>5.2.0</jna.version>
+        <gstreamer.version>1.1.0</gstreamer.version>
+        <args4j.version>2.33</args4j.version>
+        <weld.version>1.1.34.Final</weld.version>
+        <javassist.version>3.22.0-GA</javassist.version>
+        <kxml.version>2.3.0</kxml.version>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.fourthline.cling</groupId>
+            <artifactId>cling-support</artifactId>
+            <version>${cling.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>${jna.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freedesktop.gstreamer</groupId>
+            <artifactId>gst1-java-core</artifactId>
+            <version>${gstreamer.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.swt.carbon</groupId>
+                    <artifactId>macosx</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.swt.gtk.linux</groupId>
+                    <artifactId>x86</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.eclipse.swt.gtk.linux</groupId>
+                    <artifactId>x86_64</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>4thline-repo</id>
+            <url>http://4thline.org/m2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
